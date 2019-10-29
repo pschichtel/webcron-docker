@@ -8,5 +8,5 @@ fi
 
 echo "${SCHEDULE}   curl \"${TARGET_URL}\" >/proc/1/fd/1 2>/proc/1/fd/2 " > /var/spool/cron/crontabs/nobody
 
-crond -f -l 0
+crond -f -l 0 -L /dev/stdout
 
